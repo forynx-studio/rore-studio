@@ -10,3 +10,13 @@
 
 /* Interactive invitation portfolio video */
 .galleryVideo{background:#f7eeea;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center}.galleryVideo video{display:block;width:100%;max-height:620px;object-fit:contain;background:#241c1b}.interactiveSample{grid-column:auto}
+
+/* Gallery layout fix: prevent the tall video from stretching neighboring cards. */
+.galleryGrid{align-items:start}
+.galleryItem{align-self:start;min-width:0}
+.galleryVideo{height:410px;border-radius:0;background:#f7eeea}
+.galleryVideo video{width:100%;height:100%;max-height:none;object-fit:contain;background:#241c1b}
+.galleryOpen{height:410px}
+.galleryOpen img{height:100%;object-fit:contain}
+@media(max-width:900px){.galleryVideo,.galleryOpen{height:350px}}
+@media(max-width:600px){.galleryVideo,.galleryOpen{height:min(120vw,500px)}.galleryOpen img{height:100%;max-height:none}}
